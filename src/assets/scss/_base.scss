@@ -1,0 +1,46 @@
+/*
+1.2 - Base
+-----------------------------------------------------*/
+
+*,
+:before,
+:after {
+  -webkit-box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+}
+
+body {
+  height: 100%;
+  color: #1a1b1f;
+  text-rendering: optimizeLegibility;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', 游ゴシック体, YuGothic, 游ゴシック, 'Yu Gothic', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', sans-serif;
+  -webkit-font-feature-settings: 'pkna';
+     -moz-font-feature-settings: 'pkna';
+          font-feature-settings: 'pkna';
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  -webkit-transition: all .3s ease-in-out;
+     -moz-transition: all .3s ease-in-out;
+       -o-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+}

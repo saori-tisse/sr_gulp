@@ -1,0 +1,53 @@
+//
+//
+// INDEX
+//
+// -screen reader
+
+
+// screen reader
+.screen-reader-text {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px,1px,1px,1px);
+}
+
+
+.u-tal{
+  text-align: left;
+}
+
+.u-fwlight{
+  font-weight: 300;
+}
+
+.u-mt{
+  @for $c from 1 through 5{
+    &#{$c}0{
+      margin-top: #{$c}rem;
+    }
+  }
+}
+
+@include mq{
+  .u-pc{
+    &mt{
+      &20{
+        margin-top: 2rem;
+      }
+      @for $c from 1 through 5{
+        &#{$c}0{
+          margin-top: #{$c}rem;
+        }
+      }
+    }
+  }
+  .-pcmr20{
+    margin-right: 2rem;
+  }
+  .-pcmr30{
+    margin-right: 3rem;
+  }
+}

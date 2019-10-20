@@ -1,0 +1,61 @@
+
+// ===========================================
+// mixin
+// ===========================================
+
+// letterspacing
+// ------------------------------------------
+
+@mixin ls($num) {
+  letter-spacing: ($num / 1000) + em;
+}
+
+// line-height
+// ------------------------------------------
+@mixin lh($fz,$line){
+  line-height: $line / $fz;
+}
+
+
+// 擬似要素に画像配置
+// ------------------------------------------
+@mixin  gijiImg($url,$width,$height,$disp:block) {
+  content: "";
+  display: $disp;
+  background: url($url) no-repeat;
+  background-size: contain;
+  width: $width;
+  height: $height;
+}
+
+
+
+// レスポンシブ
+// ------------------------------------------
+// SP→PC
+$breakpoints: (
+  'sp': 'screen and (min-width: 400px)',
+  'tab': 'screen and (min-width: 768px)',
+  'pc': 'screen and (min-width: 1024px)',
+  'lpc': 'screen and (min-width: 1400px)',
+) !default;
+
+@mixin mq($breakpoint: tab) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// PC→SP
+$breakpoints-down: (
+  'sp': 'screen and (max-width: 400px)',
+  'tab': 'screen and (max-width: 768px)',
+  'pc': 'screen and (max-width: 1024px)',
+  'lpc': 'screen and (max-width: 1440px)',
+) !default;
+
+@mixin mqdown($breakpoint: tab) {
+  @media #{map-get($breakpoints-down, $breakpoint)} {
+    @content;
+  }
+}
