@@ -1,0 +1,15 @@
+//
+//
+// INDEX
+//
+// -screen reader
+
+
+// screen reader
+.screen-reader-text {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px,1px,1px,1px);
+}
