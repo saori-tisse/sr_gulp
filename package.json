@@ -5,13 +5,13 @@
   "main": "webpack.config.js",
   "dependencies": {
     "webpack-dev-server": "^3.11.0",
-    "webpack-stream": "^6.1.0"
+    "webpack-stream": "^6.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
-    "autoprefixer": "^10.0.1",
-    "babel-loader": "^8.1.0",
+    "autoprefixer": "^10.0.2",
+    "babel-loader": "^8.2.1",
     "browser-sync": "^2.26.13",
     "css-declaration-sorter": "^6.0.2",
     "gulp": "^4.0.2",
@@ -29,7 +29,7 @@
     "gulp-uglify": "^3.0.2",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.1",
-    "webpack": "^5.4.0",
+    "webpack": "^5.5.1",
     "webpack-cli": "^4.2.0"
   },
   "scripts": {

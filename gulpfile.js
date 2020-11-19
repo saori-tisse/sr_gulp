@@ -7,8 +7,8 @@ const plumber = require('gulp-plumber'); //エラー時の強制終了を防止
 const notify = require('gulp-notify'); //エラー発生時にデスクトップ通知する
 const sassGlob = require('gulp-sass-glob'); //@importの記述を簡潔にする
 const browserSync = require('browser-sync'); //ブラウザ反映
-const postcss = require('gulp-postcss'); //autoprefixerとセット
-const autoprefixer = require('autoprefixer'); //ベンダープレフィックス付与
+// const postcss = require('gulp-postcss'); //autoprefixerとセット
+// const autoprefixer = require('autoprefixer'); //ベンダープレフィックス付与
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const mozjpeg = require('imagemin-mozjpeg');
@@ -42,12 +42,12 @@ gulp.task('sass', function () {
     .pipe(sass({
       outputStyle: 'expanded' //expanded, nested, campact, compressedから選択
     }))
-    .pipe(postcss([autoprefixer(
-      {
-        browsers: ['last 3 version', 'safari 5', 'ie 8', 'ie 9', 'ie 10', 'ie 11', 'opera 12.1', 'firefox 14', 'ios 6', 'android 4'],
-        cascade: false
-      }
-    )]))
+    // .pipe(postcss([autoprefixer(
+    //   {
+    //     browsers: ['last 3 version', 'safari 5', 'ie 8', 'ie 9', 'ie 10', 'ie 11', 'opera 12.1', 'firefox 14', 'ios 6', 'android 4'],
+    //     cascade: false
+    //   }
+    // )]))
     .pipe(mmq({
       log: true
     }))
